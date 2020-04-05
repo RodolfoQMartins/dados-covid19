@@ -1,38 +1,136 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap');
+
+.main-wrapper {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  font-family: 'Roboto Slab', serif;
+  color: white;
+  background-color: #F5F5F5; 
+  background-image: url("./imgs/covid.jpg");
+  background-repeat: no-repeat;
+  background-position: left -200px bottom -100px;
+  padding-bottom: 100px;
+  overflow-y: visible;
+}
+
+h1, h2, p {
+  color: black;
+}
+
+section, div, p, h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 4em;
+  text-align: center;
+  margin-top: 50px;
+}
+
+h2 {
+  font-size: 3em;
+  text-align: center;
+  margin: 20px 0px 50px 0px;
+  color: #C4C4C7;
+}
+
+.form-section {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 5%;
+}
+
+.main-statics {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  min-height: 200px;
+}
+
+.loading-gif {
+  height: 200px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.loading-gif img {
+  padding: 50px;
+  width: 50px;
+  height: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.main-statics > div {
+  text-align: center;
+  vertical-align: middle;
+  padding: 30px 0px;
+}
+
+.main-statics > div > h3 {
+  font-size: 3em;
+}
+
+.main-statics > div > p {
+  font-size: 32px;
+  line-height: 38px;
+}
+
+.main-statics> div:first-child > h3{
+  color: #FFAF11;
+}
+
+.main-statics> div > h3.healed{
+  color: #4EC5A5;
+}
+
+.main-statics> div:last-child > h3{
+  color: #D03A3E;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  background-color: black;
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
+  font-size: 14px;
+  padding: 5px 0px;
+}
+
+footer > span {
+  color: #D03A3E;
+}
+
+p.warning {
+  color: #C4C4C7;
+  font-size: 12px;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+@media only screen and (max-width: 920px) {
+  h1 {
+    font-size: 3em;
+  }
+
+  .form-section {
+    padding-top: 75px;
+  }
+
+  .main-statics {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .main-wrapper {
+    background-position: -200px 110%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media only screen and (max-width: 500px) { 
+  .main-wrapper {
+    background-position: -300px 100%;
   }
 }
